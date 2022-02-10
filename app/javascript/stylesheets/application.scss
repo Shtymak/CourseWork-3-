@@ -1,0 +1,30 @@
+@import "bootstrap";
+@import "toastr";
+@import "variable/base";
+@import "components/all";
+
+.lang{
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  top: 160px;
+  display: flex;
+
+  .btn-lang{
+    border-radius: 10px 0 0 10px;
+    padding: 6px 10px;
+    background-color: #073828;
+    color: white;
+    margin-bottom: 10px;
+    display: block;
+
+    &.active{
+      color: #073828;
+      background-color: white;
+    }
+  }
+}
+
+.order_sum{
+  margin-right: 5px
+}

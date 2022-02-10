@@ -1,0 +1,260 @@
+en:
+  uk: UA
+  en: EN
+  navbar:
+    menu: "Menu"
+    delivery: "Delivery"
+    booking: "Booking"
+    banquets: "Banquets"
+    contacts: "Contact"
+    about: "About"
+  booking:
+    thanks: "Thank you! Reservation completed successfully!"
+    error_message: 'Could not find or create user'
+    save: "Time and date of reserve"
+    title: "Booking"
+    date_and_time: "Date and time"
+    date: "Date"
+    time: "Time"
+    count: "Number of people"
+    name:
+      title: "Full name"
+      placeholder: "Enter your full name"
+    phone:
+      title: "Phone number"
+      placeholder: "Enter your phone number"
+    comment:
+      title: "Comment"
+      placeholder: "Add a special request (optional)"
+    accept1: "By clicking the “Confirm booking” button below,"
+    accept2: "I agree to the processing of my personal data"
+    button: "Confirm booking"
+  cart:
+    success: 'Order saved'
+    error: 'Could not find or create client'
+    payed: 'Paid'
+    error_payed: 'Payment error'
+    promo_error: 'Promo code is invalid or already used'
+    thanks: "Thank you for your request"
+    message_sum: "Amount:"
+    back: "Back"
+    dishes:
+      one: "dish"
+      many: "dishes"
+      few: "dishes"
+      other: "dishes"
+    order_button: "Place an order"
+    clear_button: "Clear all"
+    user_data: "Enter customer details"
+    title: "Cart"
+    name: "Full name"
+    phone: "Phone number"
+    address: "Address"
+    time: "Time"
+    date: "Date"
+    sum_price: "Price of the order"
+    delivery_type:
+      title: "Delivery type"
+      delivery: "Delivery"
+      self_pickup: "Takeout"
+    payment_type:
+      title: "Payment type"
+      card: "Card"
+      cash: "Cash"
+    description: "Comment"
+    promocode: "Promo code"
+    button: "Confirm order"
+    empty: "Proceed to checkout"
+    delivery_free: "A sum left to the free delivery:"
+    common_price: "Total:"
+    requisition:
+      block_1: "Up to 499 UAH - delivery by taxi at guest's expense, taxi is charged separately."
+      block_2: "From 800 UAH within Kyiv - free delivery."
+      block_3: "From 500 UAH to 799 UAH - divided into 2 zones within Kyiv:"
+      block_4: "- Radius of 5 km from the restaurant: +50 UAH to the total cost of the order."
+      block_5: "- Radius from 5km within Kyiv: +70 UAH to the total cost of the order. "
+      block_6: "- Outside Kyiv - delivery charges are calculated separately*."
+      block_7: " To order delivery outside the city, message us on Facebook or"
+      block_8: "give us a call"
+    ordertitle: "Checkout"
+    form:
+      delivery: delivery
+  main_page:
+    title: "INDIA IS HERE!"
+    description: "A small, cozy café with an exotic menu, cocktails and a Bollywood vibe"
+    service_button: "Book a table"
+    traditions:
+      block_1: "An authentic place by the owners of HIMALAYA restaurant"
+      block_2: " Indian cuisine's greatest hits performed by an Indian chef"
+      block_3: "New experiences, new discoveries, new impressions"
+    about:
+      title: "About us"
+      block_1: "The Indian café BALU is located in the historic center of Kiev, on Velyka Zhytomyrska Street - near the Landscape Alley park, right at the crossroads of the main walking routes. People come here for the proper Indian food by the Indian chef, as well as for the signature cocktails that perfectly complement our spicy dishes."
+      block_2: "The history of BALU is closely related to that of another Indian restaurant, HIMALAYA, that first opened in Kyiv back in 1997. More than twenty years later, the son of the owners of HIMALAYA, Yashwi Tripathi, decided to open another Indian restaurant, that would be more youthful, more democratic, but just as authentic as its 'big brother'. Thus, in 2018, the Indian café BALU was opened."
+    video_blog:
+      title: "Video blog"
+    gallery:
+      title: "Gallery"
+    how_work:
+      title: "How to order"
+      block_1: "Choose dishes"
+      block_2: "Select the level of"
+      block_2_1: "spiciness"
+      block_3: "Specify delivery time"
+      block_3_1: "and address"
+      block_4: "Pay for your order"
+      block_5: "Receive"
+      block_5_1: "your order"
+    map:
+      address: "27, Velyka Zhytomyrska Street, Kyiv, 02000"
+  footer:
+    menu: "Restaurant menu"
+    time: "Working hours: 11am – 10pm"
+    delivery: "Delivery"
+    booking: "Booking"
+    about_us: "About us"
+    social: "Instagram photos"
+    about_we: "About us"
+  dish:
+    order: "Order"
+  breadcrumbs:
+    home: "Home"
+    menu: "Restaurant menu"
+    cart: "Cart"
+  pay:
+    thanks: "Thank you for the order"
+    press: "Click the button to pay for the order"
+    button: "Pay"
+    money: "UAH"
+  admin:
+    order: "Order"
+  activerecord:
+    attributes:
+      user:
+        name: "Full name"
+        phone: "Phone number"
+        description: "Description"
+      banquet:
+        name: "Full name"
+        phone: "Phone number"
+      booking:
+        user_name: "Full name"
+        select_at: "Date and time"
+        description: "Description"
+      order:
+        user_name: "Full name"
+        promo_code_id: "Promo code"
+        user_id: "User"
+        address: "Address"
+        self_pickup: "Delivery type"
+        payment_type: "Payment type"
+        state: "Status"
+        longitude: "Longitude"
+        latitude: "Latitude"
+        sum_price: "Total"
+        payment_id: "Payer number"
+        description: "Description"
+        delivery_at: "Time and date"
+      video:
+        full_url: "Full link"
+        title: "Name"
+        title_en: "Name in English"
+        description: "Description"
+        description_en: "Description in English"
+      image:
+        photo: "Photo"
+      promo_code:
+        code: "Code"
+        valid_until: "Valid until"
+        is_activated: "Activated"
+      variant:
+        name: "Name"
+        name_en: "Name in English"
+      category:
+        name: "Name"
+        name_en: "Name in English"
+        photo: "Photo"
+        sequence_number: "Sequence number"
+      config_view:
+        locale: "Language"
+        link_to_facebook: "Facebook"
+        link_to_instagram: "Instagram"
+        phone: "Phone number"
+        email: "Email"
+        merchant_id: "Account"
+      dish:
+        name: "Name"
+        name_en: "Name in English"
+        description: "Description"
+        description_en: "Description in English"
+        dish_variants: "Dish variations"
+        price: "Price"
+        weight: "Weight"
+        category: "Category"
+        is_published: "Placed"
+        is_delivered: "Available for delivery"
+        is_active_from_delivered: "Delivered now"
+        image: "Image"
+      pay:
+        sum: "Sum"
+        client_id: "Payer"
+        status: "Status"
+        details: "Details"
+        order_id: "Order"
+      admin_user:
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        reset_password_token: "Password reset"
+        reset_password_sent_at: "Sent to"
+        remember_created_at: "Created at"
+    models:
+      dashboard:
+        one: "Dashboard"
+      banquet:
+        one: "Banquet"
+        other: "Banquets"
+      category:
+        one: "Category"
+        other: "Categories"
+        many: "Categories"
+      variant:
+        one: "Variant"
+        other: "Variants"
+        few: "Variants"
+      config_view:
+        one: "Setting"
+        other: "Settings"
+      image:
+        one: "Image"
+        other: "Images"
+      video:
+        one: "Video"
+        other: "Videos"
+      dish:
+        one: "Dish"
+        other: "Dishes"
+        many: "Dishes"
+        few: "Dishes"
+      pay:
+        one: "Transaction"
+        other: "Transactions"
+      admin_user:
+        one: "Administrator"
+        other: "Administrators"
+      promo_code:
+        one: "Promo code"
+        other: "Promo codes"
+      user:
+        one: "User"
+        other: "Users"
+        few: "Users"
+      order:
+        one: "Order"
+        other: "Orders"
+        few:  "Orders"
+      booking:
+        one: "Booking"
+        other: "Bookings"
+        few: "Bookings"
+        many: "Bookings"

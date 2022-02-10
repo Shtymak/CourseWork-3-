@@ -1,0 +1,37 @@
+<div class="container mb-5">
+  <%=breadcrumbs([["menu",deliveries_path],["cart",""]])%>
+  <%= form_for @order, url: orders_path do |f| %>
+    <div class="dishes" id="dishes">
+      <div class="d-flex align-items-center">
+        <h1><%=t('cart.title') %></h1>
+        <% if @dishes.any? %>
+        <div class="ms-5">
+            <%= @dishes.count%> <%=t("cart.dishes",count: @dishes.count)%>
+        </div>
+          <a class="ms-auto color_danger" type="button" id="clear_cart">
+            X
+            <%= t('cart.clear_button') %>
+          </a>
+        <% end %>
+      </div>
+      <% if @dishes.any? %>
+          <%= render Cart::DishComponent.with_collection(@dishes) %>
+          <div class="card_price d-flex justify-content-center justify-content-md-end mt-5" >
+            <span class="me-4 d-block"><%=t("cart.common_price") %></span>
+              <span class="order_sum" id="mysumma">
+                <%= @order_sum%>
+              </span>
+            <%=t('pay.money') %>
+          </div>
+          <div class="d-flex justify-content-center justify-content-md-end mt-4">
+            <button class="btn btn__buy alt ms-md-auto" type="button" id="show_order" onclick="recalcDistance()"><%= t('cart.order_button') %></button>
+          </div>
+      <% else %>
+        <%= render 'carts/empty' %>
+      <% end %>
+    </div>
+    <div class="order" id="order_form" style="display:none">
+      <%= render 'carts/form', f: f %>
+    </div>
+  <% end %>
+</div>

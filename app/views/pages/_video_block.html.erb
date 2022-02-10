@@ -1,0 +1,24 @@
+<section id="video" class="layouts">
+  <div class="container">
+    <h2><%=t('main_page.video_blog.title')%></h2>
+    <div class="splide" id="video_scroll">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <%= render VideoComponent.with_collection(videos) %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  document.addEventListener( 'DOMContentLoaded', function () {
+    if(document.getElementById('video_scroll'))
+    var splide = new Splide( '#video_scroll', {
+      focus    : 'left',
+      autoWidth: true,
+    } );
+
+    splide.mount();
+  } );
+</script>

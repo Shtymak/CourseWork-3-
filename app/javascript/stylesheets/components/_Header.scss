@@ -1,0 +1,53 @@
+header{
+  position: relative;
+
+  @media(min-width: $breakpoint-md){
+    padding: 0px 0px 100px;
+  }
+  @media(min-width: $breakpoint-lg){
+    padding: 100px 0px 160px;
+  }
+  .container{
+    position: relative;
+    z-index: 1;
+  }
+  h1{
+    text-transform: uppercase;
+    font-weight: $font-weight-regular;
+  }
+  h6{
+    font-weight: $font-weight-regular;
+  }
+  img{
+    //width: 100%;
+  }
+  .background{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    min-height: 740px;
+    max-height: 780px;
+    object-fit: cover;
+    object-position: right;
+    @media(min-width: $breakpoint-xl){
+      width: 55%;
+    }
+  }
+}
+
+.plashechka{
+  position: relative;
+  margin-top: 70px;
+  z-index: 1;
+  background-color: $color-secondary-base;
+  color: $color-black;
+  & > .row{
+    min-height: 140px;
+  }
+  @media(min-width: $breakpoint-lg){
+    margin-top: auto;
+    top: 120px;
+    border-radius: $border-radius;
+  }
+}

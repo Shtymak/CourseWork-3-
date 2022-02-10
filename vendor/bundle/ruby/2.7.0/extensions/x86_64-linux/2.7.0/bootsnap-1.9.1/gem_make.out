@@ -1,0 +1,15 @@
+current directory: /home/rik/sites/himalaya_and_balu/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.9.1/ext/bootsnap
+/home/rik/.rvm/rubies/ruby-2.7.3/bin/ruby -I /home/rik/.rvm/rubies/ruby-2.7.3/lib/ruby/2.7.0 -r ./siteconf20210922-42987-1uibkmb.rb extconf.rb
+creating Makefile
+
+current directory: /home/rik/sites/himalaya_and_balu/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.9.1/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/rik/sites/himalaya_and_balu/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.9.1/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/rik/sites/himalaya_and_balu/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.9.1/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bootsnap.so ./.gem.20210922-42987-dc23u5/bootsnap

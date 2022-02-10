@@ -1,0 +1,53 @@
+<div class="container special">
+  <div class="row">
+    <div class="col-12 col-xl-1 category order-xl-0 mb-4 mb-xl-0">
+      <div class="torgleBtn d-block d-xl-none" data-bs-toggle="collapse" data-bs-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu">
+        <p class="text-center pb-0 mb-0"><%= t("breadcrumbs.menu")%></p>
+      </div>
+      <div class="collapse show mt-3 mt-xl-0" id="collapseMenu">
+        <div class="nav flex-column justify-content-xl-center nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <%@categories.each_with_index do |category, index|%>
+            <a href="#content" class="category_item mb-4 mb-xl-0 d-flex align-items-center w-100 <%= 'active' if index == 0 %>" id="v-pills-<%= category.id %>-tab" data-bs-toggle="pill" data-bs-target="#v-pills-<%= category.id %>" role="tab" aria-controls="v-pills-profile">
+              <%= image_tag category.image, alt: main_translate(category,"name") %>
+              <span class="name_nav"><%= main_translate(category,"name") %></span>
+            </a>
+          <%end%>
+          <%@groups.each do |group|%>
+            <a href="#collapse_<%= group.id %>" class="category_item mb-2 mb-xl-0 d-flex align-items-center w-100 " data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse_<%= group.id %>">
+              <%= image_tag group.image, alt: main_translate(group,"name"), class: "" %>
+              <span class="name_nav">
+                <%= main_translate(group,"name") %>
+              </span>
+            </a>
+            <div class="collapse" id="collapse_<%= group.id %>">
+              <div class="nav flex-column justify-content-xl-center nav-pills" data-target="#v-pills-tab" role="tablist" aria-orientation="vertical">
+                <% group.categories.each do |category|%>
+                  <a href="#content" class="category_item d-flex align-items-center w-100" id="v-pills-<%= category.id %>-tab" data-bs-toggle="pill" data-bs-target="#v-pills-<%= category.id %>" role="tab" aria-controls="v-pills-profile">
+                    <div class="bg">
+                    </div>
+                    <span class="name_nav name_nav_group"><%= main_translate(category,"name") %></span>
+                  </a>
+                <%end%>
+              </div>
+            </div>
+          <%end%>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-xl-10 offset-xl-1 order-0">
+      <span class="fix-link" id="content"></span>
+        <%=breadcrumbs([["menu",deliveries_path]])%>
+      <div class="tab-content" id="v-pills-tabContent">
+        <%@all_categories.each_with_index do |category, index|%>
+          <div class="tab-pane fade show <%= 'active' if index == 0 %>" id="v-pills-<%= category.id %>" role="tabpanel" aria-labelledby="v-pills-<%= category.id %>-tab">
+            <h3><%=main_translate(category,"name")%></h3>
+            <div class="row ">
+              <%=render DishComponent.with_collection(category.dishes.delivered.with_attached_image)%>
+            </div>
+          </div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>

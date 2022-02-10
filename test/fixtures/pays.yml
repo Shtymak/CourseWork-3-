@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sum: 1.5
+  client_id: MyString
+  status: MyString
+  details: MyString
+
+two:
+  sum: 1.5
+  client_id: MyString
+  status: MyString
+  details: MyString

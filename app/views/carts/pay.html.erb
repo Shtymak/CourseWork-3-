@@ -1,0 +1,25 @@
+<script src="https://pay.fondy.eu/static_common/v1/checkout/ipsp.js"></script>
+<script>
+function createOrder() {
+	var button = $ipsp.get('button');
+	button.setMerchantId(1396424);
+	button.setAmount(<%=@order.sum_price%>, 'UAH');
+	button.setResponseUrl('<%=callback_order_url(id: @order.id)%>');
+	button.setHost('pay.fondy.eu');
+        button.addField({ label: 'Описание покупки', name: 'order_desc', value: 'Замовлення № <%=@order.id%>' });
+        return button.getUrl();
+}
+</script>
+<div class="layouts__pages">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-xl-6 mt-5">
+        <div class="box__info alt text-center p-4 mt-5">
+          <h1><%=t('pay.thanks') %></h1>
+          <h6><%=t('pay.press') %></h6>
+          <button class="btn btn__buy alt" onclick="location.href=createOrder()"><%=t('pay.button') %> <%=@order.sum_price%> <%=t('pay.money') %></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

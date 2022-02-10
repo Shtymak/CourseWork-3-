@@ -1,0 +1,92 @@
+.btn{
+  position: relative;
+  background-color: transparent;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-sm;
+  padding: 15px;
+  border: none;
+  border-radius: $border-radius-button;
+  transition: .5s;
+  // &:hover{
+  //   animation: pulse_hover;
+  //   animation-duration: 1.5s;
+  //   animation-timing-function: linear;
+  //   animation-iteration-count: 2;
+  //   animation-direction: alternate;
+  // }
+  @media(min-width: $breakpoint-md){
+    font-size: $font-size-xs;
+  }
+  &__balu{
+    color: $color-white;
+    background: $color-primary-base;
+    padding: 1.25rem 4.5rem 1.25rem 2.25rem;
+    &:hover{
+      background-color: $color-primary-medium;
+      color: $color-white;
+    }
+    &:active{
+      color: $color-white;
+      background-color: $color-primary-dark;
+      opacity: 1;
+      box-shadow: 0px 4px 20px rgba(227, 126, 67, 0.5);
+    }
+    &:after{
+      content: "➜";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 36px;
+      width: 22px;
+      height: 22px;
+      margin: auto;
+      color: $color-white;
+      background-color: transparent;
+      border: 1px solid $color-white;
+      border-radius: 999px;
+      font-size: 12px;
+      padding: 3px 0px;
+      text-align: center;
+    }
+  }
+  &__buy{
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    background-color: $color-primary-base;
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    padding: 0;
+    font-size: $font-size-xxl;
+    &.alt{
+      width: auto;
+      height: auto;
+      font-size: $font-size-xs;
+      padding: 12px 29px 10px;
+      @media(min-width: $breakpoint-md){
+        padding: 20px 29px 18px;
+      }
+    }
+    @media(min-width: $breakpoint-md){
+      width: auto;
+      height: auto;
+      padding: 12px 29px 10px;
+      font-size: $font-size-xs;
+    }
+    &:hover{
+      background-color: $color-primary-medium;
+      color: $color-white;
+    }
+    &:active{
+      color: $color-white;
+      background-color: $color-primary-dark;
+      box-shadow: 0px 4px 20px rgba(227, 126, 67, 0.5);
+    }
+  }
+}
+
+.torgleBtn{
+  padding: 10px 20px;
+  cursor: pointer;
+}

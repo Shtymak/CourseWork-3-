@@ -1,0 +1,89 @@
+.form_style{
+  label{
+    margin-left: 15px;
+    margin-bottom: 5px;
+    color: $gray;
+  }
+  input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), textarea, select{
+    display: block;
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: 1px solid $color-neutral-line;
+    color: $color-neutral-line;
+    padding: 15px;
+    margin-bottom: 20px;
+    &:focus{
+      outline: none;
+      box-shadow: none;
+      border: 1px solid $color-neutral-line;
+    }
+  }
+  textarea{
+    height: auto;
+  }
+  option{
+    background-color: $background;
+  }
+  .custom_checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    & + label{
+      font-size: 12px;
+      color: $color-white;
+      display: flex;
+      align-items: center;
+      margin-left: 0px;
+      &:before{
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 2px solid $color-primary-base;
+        border-radius: 0.1em;
+        margin-right: 0.75em;
+        padding: 2px;
+      }
+    }
+    &:checked + label:before{
+      content: url("data:image/svg+xml; utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 6 6' fill='none'%3E%3Cpath d='M1 3L3 5L5 1' stroke='%23F1B747'/%3E%3C/svg%3E")
+    }
+  }
+  input[type="radio"]{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    & + label{
+      color: $color-neutral-line;
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+      margin-right: 30px;
+      &:before{
+        content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 2px solid $color-primary-base;
+        border-radius: 50%;
+        margin-right: 0.75em;
+        transition: .3s;
+      }
+    }
+    &:disabled + label:before{
+      border-color: $gray;
+    }
+    &:not(:disabled):hover + label:before{
+      box-shadow: 0px 0px 10px rgba($color-primary-base, .5)
+    }
+    &:checked + label:before{
+      background-color: $color-primary-base;
+      border-color: $color-primary-base;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<div class="layouts__pages">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-xl-6 mb-4 mb-xl-0">
+        <img src="/reserve.webp" alt="Резерв" class="reserve_img">
+      </div>
+      <div class="col-12 col-xl-6">
+        <h1><%= t('booking.title') %></h1>
+        <%= form_for :booking, url: bookings_path do |f| %>
+          <div class="form_style row">
+            <div class="col-12 col-md-6">
+              <%= f.label t('booking.date') %>
+              <%= f.date_field :select_date, value: Time.now.strftime('%Y-%m-%d'), placeholder: t('cart.date'), min: @mindate, required: true, onchange: "dateChange(#{:value})" %>
+            </div>
+            <div class="col-12 col-md-6">
+              <%= f.label t('booking.time') %>
+              <div class="d-flex">
+                <%= f.time_select :select_time, { selected: Time.now.hour, start_hour: @minhour, discard_minute: true, end_hour: 21, required: true, minute_step: 10 }, { class: "me-2", id: "time" } %>
+                <%= f.select(:minute, @minutes, { class: "me-2", style: "width:48%;", id: "minute" }) %>
+              </div>
+            </div>
+            <div class="col-12 ">
+
+              <%= f.label t('booking.count') %>
+              <%= f.select :person_count, (1..10).map { |i| i } %>
+
+              <%= f.fields_for :user do |f_u| %>
+                <%= f_u.label t('booking.name.title') %>
+                <%= f_u.text_field :name, placeholder: t('booking.name.placeholder'), required: true %>
+
+                <%= f_u.label t('booking.phone.title') %>
+                <%= f_u.text_field :phone, placeholder: t('booking.phone.placeholder'), required: true, class: "phone" %>
+              <% end %>
+
+              <%= f.label t('booking.comment.title') %>
+              <%= f.text_area :description, rows: 5, placeholder: t('booking.comment.placeholder') %>
+              <div class="d-flex justify-content-center justify-content-xl-start">
+                <div class="">
+                  <%= f.submit t('booking.button'), class: "btn btn__buy alt mt-4" %>
+                  <div class="mt-3">
+                    <input type="checkbox" class="custom_checkbox" id="rule_check" name="rule" required="required">
+                    <label for="rule_check">
+                      <%= t('booking.accept1') %><br>
+                      <%= t('booking.accept2') %>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,27 @@
+<%= form_with url: :admin_config_views_change do |f| %>
+  <fieldset class="inputs">
+    <ol>
+      <li class="string input optional stringish">
+        <%= f.label :link_to_facebook, class: "label" %>
+        <%= f.text_field :link_to_facebook, value: @config.data['link_to_facebook'] %>
+      </li>
+      <li class="string input optional stringish">
+        <%= f.label :link_to_instagram, class: "label" %>
+        <%= f.text_field :link_to_instagram, value: @config.data['link_to_instagram'] %>
+      </li>
+      <li class="string input optional stringish">
+        <%= f.label :phone, class: "label" %>
+        <%= f.text_field :phone, value: @config.data['phone'] %>
+      </li>
+      <li class="string input optional stringish">
+        <%= f.label :email, class: "label" %>
+        <%= f.text_field :email, value: @config.data['email'] %>
+      </li>
+      <li class="string input optional stringish">
+        <%= f.label :merchant_id, class: "label" %>
+        <%= f.text_field :merchant_id, value: @config.data['merchant_id'] %>
+      </li>
+    </ol>
+  </fieldset>
+  <%= f.submit %>
+<% end %>

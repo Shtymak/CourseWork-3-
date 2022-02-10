@@ -1,0 +1,103 @@
+/////////////////////////////////////////////////////////////
+//_________________________Modal___________________________//
+.mymodal{
+  padding: 0px;
+
+  .modal-dialog{
+
+    .modal-content{
+      margin: auto;
+      background: $color-white;
+      overflow-y: auto;
+      .forma{
+        padding: 2% 0;
+        max-width: 680px;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        h2{
+          text-align: center;
+        }
+        span{
+          width: 100%;
+          margin-bottom: 20px;
+          text-align: justify;
+        }
+        input, textarea{
+          background: $color-white;
+          margin: auto;
+          max-width: 350px;
+          width: 100%;
+          border: none;
+          display: block;
+          margin-bottom: 20px;
+          border-bottom: 2px solid #c3c3c3;
+          padding: 5px 10px;
+          overflow: hidden;
+          &:focus{
+            border-bottom: 2px solid $color-primary-base;
+            outline: none;
+          }
+          &.active{
+            border-bottom: 2px solid $color-secondary-base;
+          }
+          &[type = file]{
+            border: none;
+          }
+        }
+      }
+      .logo{
+        position: absolute;
+
+        overflow: hidden;
+        img{
+          opacity: 0.5;
+          width: 400px;
+        }
+        &.first{
+          left: 0;
+          top: 0;
+          img{
+            transform: translateX(-70px) translateY(-50px) matrix(-0.86, 0.5, -0.52, -0.86, 0, 0);
+          }
+        }
+        &.second{
+          right: 0;
+          bottom: 0;
+          img{
+            transform: translateX(70px) translateY(50px) matrix(0.86, -0.5, 0.52, 0.86, 0, 0);
+          }
+        }
+      }
+    }
+  }
+}
+.modal-backdrop{
+  max-width: none;
+}
+@media(max-width:776px){
+  .mymodal{
+    .modal-dialog{
+
+      .modal-content{
+        .forma{
+          padding: 25px;
+          h2{
+            font-size: 24pt;
+          }
+          .btn-cyber{
+            font-size: 14pt;
+          }
+        }
+      }
+    }
+  }
+}
+.btn-close{
+  // @include transition;
+  &:focus{
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+}

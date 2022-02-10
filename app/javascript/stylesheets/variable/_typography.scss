@@ -1,0 +1,66 @@
+@mixin make-heading($desktop, $tablet, $mobile, $line-height) {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: #{$mobile};
+  line-height: #{$line-height};
+	@media (min-width: $breakpoint-md) {
+		font-size: #{$tablet};
+	}
+  @media (min-width: $breakpoint-xl) {
+    font-size: #{$desktop};
+  }
+}
+
+h1, .h1 {
+  @include make-heading($font-size-xxxl, $font-size-xxl, $font-size-md, $line-height-base);
+}
+h2, .h2 {
+  @include make-heading($font-size-xxl, $font-size-xl, $font-size-m, $line-height-base);
+}
+h3, .h3 {
+  @include make-heading($font-size-xl, $font-size-l, $font-size-sm, $line-height-sm);
+  font-weight: $font-weight-light;
+}
+h4, .h4 {
+  @include make-heading($font-size-l, $font-size-m, $font-size-xs, $line-height-sm);
+}
+h5, .h5 {
+  @include make-heading($font-size-m, $font-size-m, $font-size-xs, $line-height-sm);
+}
+h6, .h6 {
+  @include make-heading($font-size-sm, $font-size-sm, $font-size-base, $line-height-sm);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.color_orange{
+	color: $color-primary-base;
+}
+
+.color_gray{
+  color: $gray;
+  font-size: $font-size-mobile;
+  &_copy{
+    color: $color-neutral-line;
+  }
+}
+
+.color_accent{
+  color: $color-secondary-base;
+}
+
+.color_danger{
+  color: $color-danger-base;
+  &:hover{
+    color: rgba($color-danger-base, .65);
+  }
+}
+
+.zero_margin{
+  margin: 0;
+}

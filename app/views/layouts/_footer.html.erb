@@ -1,0 +1,95 @@
+<footer id="footer">
+  <div class="front_area">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-12 col-xl-3 mb-5 text-center text-md-start">
+          <%= link_to root_path, class: "navbar-brand", data: { turbolinks: "false" } do %>
+            <%= image_tag "/logo.png" %>
+          <% end %>
+        </div>
+        <div class="col-12 col-md-6 col-xl-5 text-center text-md-start">
+          <div class="mb-3">
+            <%= link_to t('footer.menu'), menu_path, class: "link_active" %>
+          </div>
+          <div class="mb-3">
+            <%= link_to t('footer.delivery'), deliveries_path, class: "link_active" %>
+          </div>
+          <div class="mb-3">
+            <%= link_to t('footer.about_we'), root_path + "#about_link", class: "link_active", data: { turbolinks: "false" } %>
+          </div>
+          <div class="mb-4">
+            <%= link_to t('footer.booking'), new_booking_path, class: "link_active" %>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="d-flex d-md-none d-xl-flex justify-content-center justify-content-md-end ms-xl-4 ms-xxl-5 mb-3">
+            <!-- Facebook -->
+            <%= link_to $config_view.data['link_to_facebook'], class: "me-3", target: "_blank" do %>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 33 34" fill="none">
+                <path d="M6.07254 0.285645C2.77178 0.285645 0.114014 3.00823 0.114014 6.3895V27.6104C0.114014 30.9917 2.77178 33.7142 6.07254 33.7142H17.3002V20.6458H13.9268V15.9407H17.3002V11.9209C17.3002 8.76273 19.2934 5.863 23.8849 5.863C25.7439 5.863 27.1186 6.04582 27.1186 6.04582L27.0105 10.4396C27.0105 10.4396 25.6085 10.426 24.0786 10.426C22.4229 10.426 22.1574 11.2075 22.1574 12.5049V15.9407H27.142L26.9248 20.6458H22.1574V33.7143H26.7881C30.0889 33.7143 32.7467 30.9917 32.7467 27.6104V6.38953C32.7467 3.00827 30.0889 0.285678 26.7881 0.285678H6.07251L6.07254 0.285645Z" fill="#F2F2F2"/>
+              </svg>
+            <% end %>
+            <!-- Instagram -->
+            <%= link_to $config_view.data['link_to_instagram'], class: "me-0", target: "_blank" do %>
+              <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 33 35" fill="none">
+                <path d="M16.426 11.7476C13.446 11.7476 11.0141 14.3044 11.0141 17.4375C11.0141 20.5706 13.446 23.1274 16.426 23.1274C19.406 23.1274 21.8379 20.5706 21.8379 17.4375C21.8379 14.3044 19.406 11.7476 16.426 11.7476ZM32.6577 17.4375C32.6577 15.0813 32.678 12.7464 32.5521 10.3945C32.4263 7.66261 31.8335 5.2381 29.9335 3.24044C28.0293 1.23851 25.7273 0.619575 23.129 0.487251C20.8879 0.354927 18.6671 0.37627 16.43 0.37627C14.1889 0.37627 11.9681 0.354927 9.7311 0.487251C7.13273 0.619575 4.82667 1.24278 2.92661 3.24044C1.02249 5.24237 0.433797 7.66261 0.307938 10.3945C0.18208 12.7507 0.202379 15.0856 0.202379 17.4375C0.202379 19.7894 0.18208 22.1286 0.307938 24.4805C0.433797 27.2124 1.02655 29.6369 2.92661 31.6346C4.83073 33.6365 7.13273 34.2554 9.7311 34.3877C11.9722 34.5201 14.193 34.4987 16.43 34.4987C18.6711 34.4987 20.8919 34.5201 23.129 34.3877C25.7273 34.2554 28.0334 33.6322 29.9335 31.6346C31.8376 29.6326 32.4263 27.2124 32.5521 24.4805C32.6821 22.1286 32.6577 19.7937 32.6577 17.4375ZM16.426 26.1922C11.8179 26.1922 8.099 22.2823 8.099 17.4375C8.099 12.5927 11.8179 8.68279 16.426 8.68279C21.034 8.68279 24.753 12.5927 24.753 17.4375C24.753 22.2823 21.034 26.1922 16.426 26.1922ZM25.094 10.3688C24.0181 10.3688 23.1493 9.45539 23.1493 8.32423C23.1493 7.19308 24.0181 6.27962 25.094 6.27962C26.1699 6.27962 27.0387 7.19308 27.0387 8.32423C27.039 8.59283 26.9889 8.85886 26.8913 9.10707C26.7937 9.35529 26.6505 9.58082 26.4698 9.77075C26.2892 9.96067 26.0747 10.1113 25.8386 10.2139C25.6025 10.3165 25.3495 10.3692 25.094 10.3688Z" fill="#F2F2F2"/>
+              </svg>
+            <% end %>
+            <!-- <p class="mt-3 mt-md-0"><%#= t('footer.social') %></p>
+            <div class="d-flex justify-content-center justify-content-md-end ">
+              <%#= image_tag "/inst_1.png", class: "me-2" %>
+              <%#= image_tag "/inst_2.png", class: "me-2" %>
+              <%#= image_tag "/inst_3.png" %>
+            </div> -->
+          </div>
+          <div class="mb-2 text-center text-md-end text-lg-end">
+            <%= link_to "tel:#{$config_view.data['phone']}", class: "link_active m-0" do %>
+              <%= $config_view.data['phone'] %>
+            <% end %>
+          </div>
+          <div class="mb-2 text-center text-md-end">
+            <p><%= t('footer.time') %></p>
+          </div>
+        </div>
+        <div class="col-12 mt-5 text-center text-md-start">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-xl-4 text-center text-md-center text-xl-start order-2 order-md-1 order-xl-0">
+              <p class="color_gray color_gray_copy">©2021 Balu. Усі права захищені</p>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 text-center text-md-end order-0">
+              <p class="color_gray color_gray_copy" id="demo" role="button" onclick="copyToClipboard(document.getElementById('demo').innerHTML)"><%=$config_view.data['email']%></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  function copyToClipboard(text) {
+      window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+  }
+</script>
+<!-- Messenger Плагин чата Code -->
+<div id="fb-root" data-turbolinks-permanent></div>
+<!-- Your Плагин чата code -->
+<div id="fb-customer-chat" data-turbolinks-permanent class="fb-customerchat" page_id="565459127156955" attribution="biz_inbox" greeting_dialog_display="hide"></div>
+
+
+<script type="text/javascript">
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml: true,
+      version: 'v11.0'
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>

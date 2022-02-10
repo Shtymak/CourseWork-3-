@@ -1,0 +1,58 @@
+#map{
+  position: relative;
+  .container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100%;
+  }
+}
+
+.box{
+  width: 100%;
+  min-height: 382px;
+  background-color: $color-secondary-base;
+  position: absolute;
+  top: 160px;
+  z-index: 4;
+  padding: 40px 33px 50px;
+  @media(max-width: $breakpoint-md-max){
+    position: relative;
+    top: 0px;
+  }
+  @media(min-width: $breakpoint-md){
+    padding: 55px 70px 75px;
+    max-width: 460px;
+    border-radius: $border-radius;
+  }
+
+  a{
+    color: $color-black;
+  }
+}
+
+.icons{
+  width: 29px;
+}
+
+.box__info{
+  width: 100%;
+  padding: 40px 15px 40px;
+  background-color: $background-light;
+  p{
+    margin-bottom: 30px;
+  }
+  .list{
+    margin-bottom: 20px;
+    padding-left: 40px;
+    p{
+      color: $color-neutral-text;
+      font-size: $font-size-mobile;
+    }
+  }
+  @media(min-width: $breakpoint-md){
+    padding: 60px 100px 70px;
+  }
+}

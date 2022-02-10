@@ -1,0 +1,16 @@
+current directory: /home/rik/sites/himalaya_and_balu/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+/home/rik/.rvm/rubies/ruby-2.7.3/bin/ruby -I /home/rik/.rvm/rubies/ruby-2.7.3/lib/ruby/2.7.0 -r ./siteconf20210922-42987-1fz065s.rb extconf.rb
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /home/rik/sites/himalaya_and_balu/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /home/rik/sites/himalaya_and_balu/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/rik/sites/himalaya_and_balu/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -m 0755 cparse.so ./.gem.20210922-42987-5xpqha/racc

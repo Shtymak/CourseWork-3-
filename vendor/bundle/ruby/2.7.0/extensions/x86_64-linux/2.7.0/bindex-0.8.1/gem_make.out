@@ -1,0 +1,15 @@
+current directory: /home/rik/sites/himalaya_and_balu/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/home/rik/.rvm/rubies/ruby-2.7.3/bin/ruby -I /home/rik/.rvm/rubies/ruby-2.7.3/lib/ruby/2.7.0 -r ./siteconf20210922-42987-zbhslj.rb extconf.rb
+creating Makefile
+
+current directory: /home/rik/sites/himalaya_and_balu/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/rik/sites/himalaya_and_balu/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/rik/sites/himalaya_and_balu/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -m 0755 cruby.so ./.gem.20210922-42987-v2kb7q/skiptrace/internal

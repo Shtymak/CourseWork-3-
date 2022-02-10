@@ -1,0 +1,22 @@
+<div class="col-6 col-xl-4">
+  <div class="product_cart">
+    <%= image_tag @dish.dish_image(300,300), alt: main_translate(@dish,"name") %>
+    <div class="card_head">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-9 order-1 order-md-0">
+          <h5><%= main_translate(@dish,"name") %></h5>
+        </div>
+        <div class="col-12 col-md-3 order-0 text-md-end">
+          <p class="card_weight"><%= @dish.weight %></p>
+        </div>
+      </div>
+
+    </div>
+    <div class="card_body">
+      <p><%= main_translate(@dish,"description") %></p>
+    </div>
+    <div class="card_footer d-flex">
+      <p class="card_price"><%= @dish.price %> <%=t('pay.money') %></p>
+    </div>
+  </div>
+</div>

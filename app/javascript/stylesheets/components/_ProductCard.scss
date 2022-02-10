@@ -1,0 +1,61 @@
+.product_cart{
+  min-height: 326px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: $background-dark;
+  border-radius: 4px;
+  @media(min-width: $breakpoint-md){
+    margin-bottom: 35px;
+    padding: 30px;
+    border-radius: $border-radius;
+  }
+  img{
+    width: 100%;
+    height: 140px;
+    margin: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin-bottom: 5px;
+    @media(min-width: $breakpoint-md){
+      width: 100%;
+      height: 220px;
+      margin-bottom: 10px;
+    }
+  }
+  h5{
+    font-size: $font-size-base;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    @media(min-width: $breakpoint-md){
+      font-size: $font-size-xs;
+    }
+  }
+}
+
+.card_body{
+  p{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    margin-bottom: 17px;
+    font-size: $font-size-mobile-xs;
+    color: $color-neutral-text;
+    overflow: hidden;
+    @media(min-width: $breakpoint-md){
+      font-size: $font-size-mobile;
+      margin-bottom: 38px;
+    }
+  }
+}
+
+.card_weight{
+  font-size: $font-size-mobile;
+  color: $color-neutral-line;
+}
+
+.card_price{
+  font-size: $font-size-xs;
+  font-weight: bold;
+}

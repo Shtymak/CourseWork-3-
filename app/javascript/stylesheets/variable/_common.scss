@@ -1,0 +1,153 @@
+body {
+  max-width: 1920px;
+  margin: auto;
+  min-width: 320px;
+  color: $color-white;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-family: $font-primary;
+  background-color: $background;
+  -webkit-text-size-adjust: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container-fluid{
+  padding: 0px;
+}
+
+a {
+  transition: all .5s;
+  cursor: pointer;
+  color: $color-white;
+  text-decoration: none;
+  &:hover {
+    color: $color-secondary-base;
+  }
+  &.active{
+    color: $color-primary-base;
+  }
+}
+
+.plain-text {
+  p {
+    margin: 0 !important;
+    padding: 0 !important;
+    a{
+      cursor: pointer;
+    }
+  }
+}
+
+.link_active{
+  position: relative;
+  padding: 10px 0px;
+  font-size: $font-size-xs;
+  &:hover{
+    color: $color-secondary-base;
+  }
+  &:active{
+    color: rgba($color-secondary-base, .7);
+  }
+  @media(min-width: $breakpoint-xl){
+    margin-right: 20px;
+  }
+  @media(min-width: $breakpoint-xxl){
+    margin-right: 40px;
+  }
+}
+
+.splide__pagination{
+  position: absolute;
+  bottom: -40px;
+
+  @media(min-width: $breakpoint-md){
+    transform: none;
+    left: auto;
+    bottom: auto;
+    top: -70px;
+    right: 115px;
+    justify-content: flex-end;
+  }
+}
+
+.splide__pagination__page{
+  background-color: $color-white;
+  &.is-active{
+    background-color: $color-primary-base;
+  }
+}
+
+.splide__arrows{
+  position: relative;
+  top: -60px;
+  @media(min-width: $breakpoint-md){
+    top: -60px;
+  }
+}
+
+.splide__arrow{
+  border: 1px solid $color-neutral-line;
+  background-color: transparent;
+  transition: .5s;
+  svg{
+    transition: .5s;
+    fill: $color-white;
+  }
+  &.splide__arrow--next{
+
+  }
+  &.splide__arrow--prev{
+    left: auto;
+    right: 4em;
+  }
+  &:hover{
+    border: 1px solid $color-primary-base;
+    svg{
+      fill: $color-primary-base;
+    }
+  }
+}
+
+.fix_link{
+  display: block;
+  position: relative;
+  top: -100px;
+}
+
+.reserve_img{
+  width: 100%;
+  height: 155px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: $border-radius;
+  @media(min-width: $breakpoint-md){
+    height: 390px;
+  }
+  @media(min-width: $breakpoint-xl){
+    height: 750px;
+  }
+}
+
+.breadcrumbs{
+  position: relative;
+  display: block;
+  font-size: $font-size-mobile-xs;
+  color: $color-neutral-line;
+  &:hover{
+    z-index: 100;
+  }
+  a{
+    font-size: $font-size-mobile-xs;
+    color: $color-neutral-line;
+    &:hover{
+      color: $color-primary-base;
+    }
+  }
+}
+
+.fix-link {
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
