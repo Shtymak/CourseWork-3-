@@ -25,7 +25,6 @@ module HimalayaAndBalu
       I18n.default_locale = :uk
       I18n.reload!
     end
-
     config.active_storage.content_types_to_serve_as_binary -= ['image/svg+xml']
     config.i18n.fallbacks = true
     config.active_storage.service_urls_expire_in = 30.days

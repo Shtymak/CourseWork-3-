@@ -20,7 +20,6 @@ gem 'turbosms_ruby', '~> 0.1.0'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'view_component'
 gem 'webpacker', '~> 5.0'
-
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
@@ -38,4 +37,6 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+
 end
+
