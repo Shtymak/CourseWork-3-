@@ -6,6 +6,7 @@ COPY Gemfile.lock /app/Gemfile.lock
 RUN gem install bundler
 RUN bundle --version
 RUN bundle install
+EXPOSE 3000
 COPY . /app
 
-CMD ["rails", "server"]
+CMD ["rails", "server", "-b", "0.0.0.0"]

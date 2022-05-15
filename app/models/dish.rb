@@ -18,7 +18,7 @@ class Dish < ApplicationRecord
 
   def dish_image(width= 200,height=200)
     if image.attached?
-      image.variant(resize_to_limit: [width,height])
+      image
     else
       '/bash.svg'
     end

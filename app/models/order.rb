@@ -31,7 +31,7 @@ class Order < ApplicationRecord
 
   def send_message()
     # Telegram::SendAdminChatJob.perform_later("null")
-    ::TurbosmsRuby.new.send_message([phone], "balu.kiev.ua\n#{user.name}, #{I18n.t('cart.thanks')} #{I18n.t('cart.message_sum')} #{self.sum_price}"
+    ::TurbosmsRuby.new.send_message([phone], "picbu.ua\n#{user.name}, #{I18n.t('cart.thanks')} #{I18n.t('cart.message_sum')} #{self.sum_price}"
     )
   end
 

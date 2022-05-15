@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
                      referer: request.referer,
                      user_agent: request.user_agent)
 
-    Telegram::SendAdminChatJob.perform_later("balu \n #{e.message} \nhttps://balu.kiev.ua/#{admin_log_path(log.id)}")
+    Telegram::SendAdminChatJob.perform_later("picBu\n #{e.message} \nlocalhost/#{admin_log_path(log.id)}")
     render file: 'public/500.html', layout: false, status: 500
   end
 

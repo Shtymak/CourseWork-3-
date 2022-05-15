@@ -2,7 +2,7 @@
 <script>
 function createOrder() {
 	var button = $ipsp.get('button');
-	button.setMerchantId(1396424);
+	button.setMerchantId();#TODO: add test id
 	button.setAmount(<%=@order.sum_price%>, 'UAH');
 	button.setResponseUrl('<%=callback_order_url(id: @order.id)%>');
 	button.setHost('pay.fondy.eu');

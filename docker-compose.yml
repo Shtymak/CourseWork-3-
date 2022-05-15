@@ -1,14 +1,12 @@
 version: '3.0'
 services:
   main:
+    image: react2022/picbu
     container_name: main
-    build:
-      context: app
+#    build:
+#      context: app
     env_file:
       - .env
-    volumes:
-      - .:/app
-      - /app/node_modules
     ports:
       - 3000:3000
     restart: always
