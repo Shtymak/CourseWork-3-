@@ -35,7 +35,7 @@ class BookingsController < ApplicationController
       "Дата і час:#{booking.select_at.strftime('%H:%M %F')}\n\n" +
       "Кількість людей: #{booking.person_count}\n\n" +
       "Коментар: #{booking.description}\n\n" +
-      "Посилання: balu.kiev.ua#{admin_booking_path(booking)}"
+      "Посилання: picbu.ua#{admin_booking_path(booking)}"
     text
   end
 

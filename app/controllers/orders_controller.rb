@@ -29,8 +29,8 @@ class OrdersController < ApplicationController
           redirect_to pay_order_path(order)
         else
           flash[:success] = I18n.t('cart.success')
-          #Telegram::SendAdminChatJob.perform_later(order_text(@order, @user))
-          #@order.send_message
+          Telegram::SendAdminChatJob.perform_later(order_text(@order, @user))
+          @order.send_message
           redirect_to root_path
         end
       end
@@ -54,7 +54,7 @@ class OrdersController < ApplicationController
       flash[:success] = I18n.t('cart.payed')
       order.update(payment_id: params[:payment_id], state: 1)
       @pay.update(status: 'Успішно', client_id: params[:payment_id], details: "Картка: #{params[:masked_card]}")
-      #Telegram::SendAdminChatJob.perform_later(order_text(order, User.find_by(id: order.user_id)))
+      Telegram::SendAdminChatJob.perform_later(order_text(order, User.find_by(id: order.user_id)))
       order.send_message
     else
       @pay.update(status: 'Збій', details: "Картка: #{params[:masked_card]}")

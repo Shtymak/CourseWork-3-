@@ -8,8 +8,8 @@ let location1 = null;
 function initMap() {
     const mapOptions = {
         center: {
-            lat: 50.401699,
-            lng: 30.2538852
+            lat: 48.613184,
+            lng: 22.292591
         },
         zoom: 6
     };
@@ -19,7 +19,7 @@ function initMap() {
     });
 
     const input = document.getElementById("order_address")
-    const circle = new google.maps.Circle({center: new google.maps.LatLng(50.450001, 30.523333), radius: 15000})
+    const circle = new google.maps.Circle({center: new google.maps.LatLng(48.613184, 22.292591), radius: 15000})
     const options = {
         componentRestrictions: {country: "ua"},
         strictBounds: true,
